@@ -35,3 +35,10 @@
     - Amazon Personalize
  
  ## ML on GCP
+ 
+ 
+## Sources:
+https://www.udemy.com/course/machinelearning/
+https://www.udemy.com/course/aws-machine-learning/
+https://cloud.google.com/learn/artificial-intelligence-vs-machine-learning
+
