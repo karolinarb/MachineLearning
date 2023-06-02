@@ -83,12 +83,12 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, rando
 ```
 
 ### Feature Scaling
-Some models prefer feature data to be normally distributed around 0 (most neural nets)
- - Most models require feature data to at least be scaled to comparable values
- - Otherwise features with larger magnitudes will have more weight than they should
- - Example: modeling age and income as features – incomes will be much higher values than ages
- -  Scikit_learn has a preprocessor module that helps (MinMaxScaler, etc)
- -  Remember to scale your results back up
+    - Some models prefer feature data to be normally distributed around 0 (most neural nets)
+    - Most models require feature data to at least be scaled to comparable values
+    - Otherwise features with larger magnitudes will have more weight than they should
+    - Example: modeling age and income as features – incomes will be much higher values than ages
+    -  Scikit_learn has a preprocessor module that helps (MinMaxScaler, etc)
+    -  Remember to scale your results back up
  
 ```python 
 from sklearn.preprocessing import StandardScaler
