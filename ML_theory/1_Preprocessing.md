@@ -1,6 +1,7 @@
 ## Data preprocessing tools
 
 ### Importing libraries
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -8,6 +9,7 @@ import pandas as pd>
 ```
 
 ### Importing the dataset
+
 ```python
 dataset = pd.read_csv('Data.csv')
 X = dataset.iloc[:, :-1].values
@@ -17,6 +19,7 @@ x - independent variables
 y - dependent variable
 
 ### Missing data strategies
+
 1. Dropping
     - If not many rows contain missing data and dropping those rows doesn’t bias your data
     - But, it’s never going to be the right answer for the “best” approach.
@@ -49,12 +52,14 @@ x[:,1:3]=imputer.transform(x[:,a:b])
             - Most advanced technique: MICE (Multiple Imputation by Chained Equations)
   
 ### Encoding categorical data
+
 Categorical data:
     - Qualitative data that has no inherent mathematical meaning
     - Gender, Yes/no (binary data), Race, State of Residence, Product Category, Political Party, etc.
     - You can assign numbers to categories in order to represent them more compactly, but the numbers don’t have mathematical meaning
 
 #### Encoding the Independent Variable
+
 One-hot encoding:
     - Create “buckets” for every category
     - The bucket for your category has a 1, all others have a 0
@@ -69,6 +74,7 @@ x = np.array(ct.fit_transform(x))
 e.g France, Germany, Spain -> 1.0.0, 0.1.0, 0.0.1  
 
 #### Encoding the Dependent Variable
+
 ```python 
 from sklearn.preprocessing import LabelEncoder
 le = LabelEncoder()
@@ -77,18 +83,16 @@ y = le.fit_transform(y)
 e.g No, Yes -> 0, 1
 
 ### Splliting dataset into train and test sets
+
 ```python
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
 ```
 
 ### Feature Scaling
-    - Some models prefer feature data to be normally distributed around 0 (most neural nets)
-    - Most models require feature data to at least be scaled to comparable values
-    - Otherwise features with larger magnitudes will have more weight than they should
-    - Example: modeling age and income as features – incomes will be much higher values than ages
-    - Scikit_learn has a preprocessor module that helps (MinMaxScaler, etc)
-    - Remember to scale your results back up
+
+Some models prefer feature data to be normally distributed around 0 (most neural nets). Most models require feature data to at least be scaled to comparable values. Otherwise features with larger magnitudes will have more weight than they should
+Example: modeling age and income as features – incomes will be much higher values than ages
  
 ```python 
 from sklearn.preprocessing import StandardScaler
