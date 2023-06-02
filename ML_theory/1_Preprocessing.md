@@ -54,16 +54,16 @@ x[:,1:3]=imputer.transform(x[:,a:b])
 ### Encoding categorical data
 
 Categorical data:
-    - Qualitative data that has no inherent mathematical meaning
-    - Gender, Yes/no (binary data), Race, State of Residence, Product Category, Political Party, etc.
-    - You can assign numbers to categories in order to represent them more compactly, but the numbers don’t have mathematical meaning
+- Qualitative data that has no inherent mathematical meaning
+- Gender, Yes/no (binary data), Race, State of Residence, Product Category, Political Party, etc.
+- You can assign numbers to categories in order to represent them more compactly, but the numbers don’t have mathematical meaning
 
 #### Encoding the Independent Variable
 
 One-hot encoding:
-    - Create “buckets” for every category
-    - The bucket for your category has a 1, all others have a 0
-    - Very common in deep learning, where categories are represented by individual output “neurons”
+- Create “buckets” for every category
+- The bucket for your category has a 1, all others have a 0
+- Very common in deep learning, where categories are represented by individual output “neurons”
     
 ```python 
 from sklearn.compose import ColumnTransformer
