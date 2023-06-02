@@ -1,5 +1,7 @@
 # Machine Learning Study Guide
 
+[Intro: What is Machine Learning? What is AI?](ML_theory/AI_vs_ML.md)
+
 ## ML theory
 1. [Preprocessing](ML_theory/1_Preprocessing.md)
 2. [Regression](ML_theory/2_Regression.md)
