@@ -10,7 +10,7 @@
 7. [Natural Language Processing](ML_theory/7_NLP.md)
 8. [Deep Learning](ML_theory/8_DL.md)
 9. [Dimensionality Reduction](ML_theory/9_Dimensionality_Reduction.md)
-10.[Model Selection and Boosting](ML_theory/10_Model_Selection_and_Boosting.md)
+10. [Model Selection and Boosting](ML_theory/10_Model_Selection_and_Boosting.md)
 
 ## ML on AWS
 1. Data Engineering on AWS
