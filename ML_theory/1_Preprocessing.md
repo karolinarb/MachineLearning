@@ -49,13 +49,13 @@ x[:,1:3]=imputer.transform(x[:,a:b])
             - Most advanced technique: MICE (Multiple Imputation by Chained Equations)
   
 ### Encoding categorical data
-Categorical data 
+Categorical data:
     - Qualitative data that has no inherent mathematical meaning
     - Gender, Yes/no (binary data), Race, State of Residence, Product Category, Political Party, etc.
     - You can assign numbers to categories in order to represent them more compactly, but the numbers don’t have mathematical meaning
 
 #### Encoding the Independent Variable
-One-hot encoding
+One-hot encoding:
     - Create “buckets” for every category
     - The bucket for your category has a 1, all others have a 0
     - Very common in deep learning, where categories are represented by individual output “neurons”
@@ -87,8 +87,8 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, rando
     - Most models require feature data to at least be scaled to comparable values
     - Otherwise features with larger magnitudes will have more weight than they should
     - Example: modeling age and income as features – incomes will be much higher values than ages
-    -  Scikit_learn has a preprocessor module that helps (MinMaxScaler, etc)
-    -  Remember to scale your results back up
+    - Scikit_learn has a preprocessor module that helps (MinMaxScaler, etc)
+    - Remember to scale your results back up
  
 ```python 
 from sklearn.preprocessing import StandardScaler
