@@ -42,3 +42,10 @@
 - https://www.udemy.com/course/aws-machine-learning/
 - https://cloud.google.com/learn/artificial-intelligence-vs-machine-learning/
 
+## Next steps:
+- https://www.coursera.org/specializations/machine-learning-introduction
+- https://www.coursera.org/specializations/deep-learning
+- https://www.coursera.org/specializations/mlops-machine-learning-duke
+- https://www.coursera.org/specializations/practical-data-science
+- https://www.coursera.org/professional-certificates/preparing-for-google-cloud-machine-learning-engineer-professional-certificate
+- https://www.coursera.org/learn/ai-for-medical-diagnosis
