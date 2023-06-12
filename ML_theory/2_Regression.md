@@ -6,7 +6,7 @@ For simple, multiple and polynomial linear regression: Don't need to apply featu
 
 Machine Learning Regression models:
 ### - Simple Linear Regression
-**y = b0 + b1x1**
+**$y = b_0 + b_1x_1$**
 - Training the Simple Linear Regression model on the Training set
 ```python
 from sklearn.linear_model import LinearRegression
@@ -41,7 +41,7 @@ print(regressor.intercept_)
 The ordinary least squares (OLS) method can be defined as a linear regression technique that is used to estimate the unknown         parameters in a model. The method relies on minimizing the sum of squared residuals between the actual (observed values of the        dependent variable) and predicted values from the model.
 
 ### - Multiple Linear Regression
-**y = b0 + b1x1 + b2x2 + ... + bnxn**
+**$y = b_0 + b_1x_1 + b_2x_2 + ... + b_nx_n$**
 
 Backward Elimination is irrelevant in Python, because the Scikit-Learn library automatically takes care of selecting the statistically significant features when training the model to make accurate predictions.
 
@@ -57,7 +57,7 @@ print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),
 ```
 
 ### - Polynomial Linear Regression
-**y = b0 + b1x1 +b2(x1)^2 + ... + bn(x1)^n**
+**$y = b_0 + b_1x_1 +b_2(x_1)^2 + ... + b_n(x_1)^n$**
 
 
 #### Training the polynomial regression model on the whole set
@@ -92,3 +92,28 @@ regressor.fit(X, y)
 ```
 
 ### - Random Forest Regression
+```python
+from sklearn.ensemble import RandomForestRegressor
+regressor = RandomForestRegressor(n_estimators = 10, random_state = 0)
+regressor.fit(X, y)
+```
+
+## Evaluating Regression Models Performance
+### R squared
+
+- $SS_{res} = SUM (y_i - y_î)^2$
+- $SS_{tot} = SUM (y_i - y_{avg})^2$
+
+- $R^2 = 1 - \frac{SS_{res}}{SS_{tot}}$
+
+Rule of thumb - highly dependent on the context!:
+- 1.0: perfect fit
+- ~0.9: very good
+- <0.7: not great
+- <0.4: terrible
+- <0 : model makes no sense for the data set
+
+### Adjusted R squared
+
+$R^2 = 1 - (1 - R^2) * \frac{n-1}{n-k-1}$
+where k = number of independent variables and n = sample size
