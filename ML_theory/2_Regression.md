@@ -117,3 +117,8 @@ Rule of thumb - highly dependent on the context!:
 
 $R^2 = 1 - (1 - R^2) * \frac{n-1}{n-k-1}$
 where k = number of independent variables and n = sample size
+
+```python
+from sklearn.metrics import r2_score
+r2_score(y_test, y_pred)
+```
