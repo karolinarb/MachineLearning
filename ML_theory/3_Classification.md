@@ -41,7 +41,23 @@ from sklearn.svm import SVC
 classifier = SVC(kernel = 'rbf', random_state = 0)
 classifier.fit(X_train, y_train)
 ```
-- Naive Bayes
-- Decision Tree Classification
-- Random Forest Classification
+### - Naive Bayes
+```python
+from sklearn.naive_bayes import GaussianNB
+classifier = GaussianNB()
+classifier.fit(X_train, y_train)
+```
+
+### - Decision Tree Classification
+```python
+from sklearn.tree import DecisionTreeClassifier
+classifier = DecisionTreeClassifier(criterion = 'entropy', random_state = 0)
+classifier.fit(X_train, y_train)
+```
+### - Random Forest Classification
+```python
+from sklearn.ensemble import RandomForestClassifier
+classifier = RandomForestClassifier(n_estimators = 10, criterion = 'entropy', random_state = 0)
+classifier.fit(X_train, y_train)
+```
 
